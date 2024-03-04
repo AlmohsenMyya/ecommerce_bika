@@ -38,7 +38,7 @@ class ExplorePage extends StatelessWidget {
   PreferredSizeWidget _buildAppBar() {
     return CustomAppBar(
         title: AppbarTitleSearchview(
-            margin: EdgeInsets.only(left: 16.h,right: 16.h),
+            margin: EdgeInsets.only(left: 16.h, right: 16.h),
             hintText: "lbl_search_product".tr,
             controller: controller.searchController),
         actions: [

@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: theme,
         translations: AppLocalization(),
-        locale: Get.deviceLocale, //for setting localization strings
+        locale: Get.deviceLocale,
+        //for setting localization strings
         fallbackLocale: Locale('en', 'US'),
         title: 'dhiwise_ecommerce',
         initialBinding: InitialBindings(),

@@ -28,48 +28,47 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   return SafeArea(
-    child: Scaffold(
-     appBar: _buildAppBar(),
-     body: SizedBox(
-      width: SizeUtils.width,
-      child: SingleChildScrollView(
-       // Add a height constraint here
-       child: ConstrainedBox(
-        constraints: BoxConstraints(
-         minHeight: MediaQuery.of(context).size.height,
+    return SafeArea(
+      child: Scaffold(
+        appBar: _buildAppBar(),
+        body: SizedBox(
+          width: SizeUtils.width,
+          child: SingleChildScrollView(
+            // Add a height constraint here
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                minHeight: MediaQuery.of(context).size.height,
+              ),
+              child: Padding(
+                padding: EdgeInsets.only(top: 27.v, left: 16.h, bottom: 5.v),
+                child: Column(
+                  children: [
+                    _buildOfferBannerTitle(),
+                    SizedBox(height: 25.v),
+                    _buildCategories(),
+                    SizedBox(height: 37.v),
+                    _buildFlashSale1(),
+                    SizedBox(height: 23.v),
+                    _buildMegaSale1(),
+                    SizedBox(height: 29.v),
+                    CustomImageView(
+                      imagePath: ImageConstant.imgRecomendedProduct,
+                      height: 206.v,
+                      width: 343.h,
+                      radius: BorderRadius.circular(5.h),
+                      alignment: Alignment.centerLeft,
+                    ),
+                    SizedBox(height: 16.v),
+                    _buildProducts(),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ),
-        child: Padding(
-         padding: EdgeInsets.only(top: 27.v, left: 16.h, bottom: 5.v),
-         child: Column(
-          children: [
-           _buildOfferBannerTitle(),
-           SizedBox(height: 25.v),
-           _buildCategories(),
-           SizedBox(height: 37.v),
-           _buildFlashSale1(),
-           SizedBox(height: 23.v),
-           _buildMegaSale1(),
-           SizedBox(height: 29.v),
-           CustomImageView(
-            imagePath: ImageConstant.imgRecomendedProduct,
-            height: 206.v,
-            width: 343.h,
-            radius: BorderRadius.circular(5.h),
-            alignment: Alignment.centerLeft,
-           ),
-           SizedBox(height: 16.v),
-           _buildProducts(),
-          ],
-         ),
-        ),
-       ),
       ),
-     ),
-    ),
-   );
+    );
   }
-
 
   /// Section Widget
   PreferredSizeWidget _buildAppBar() {
@@ -77,10 +76,11 @@ class DashboardPage extends StatelessWidget {
         leadingWidth: 48.h,
         leading: AppbarLeadingImage(
             imagePath: ImageConstant.imgRewind,
-            margin: EdgeInsets.only(left: 32.h, top: 20.v, bottom: 20.v,right: 16.h)),
+            margin: EdgeInsets.only(
+                left: 32.h, top: 20.v, bottom: 20.v, right: 16.h)),
         title: AppbarSubtitleOne(
             text: "lbl_search_product".tr,
-            margin: EdgeInsets.only(left: 8.h,right: 8.h),
+            margin: EdgeInsets.only(left: 8.h, right: 8.h),
             onTap: () {
               onTapSearchProduct();
             }),
@@ -118,7 +118,7 @@ class DashboardPage extends StatelessWidget {
   /// Section Widget
   Widget _buildOfferBannerTitle() {
     return SingleChildScrollView(
-      child:  Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
             padding: EdgeInsets.only(right: 16.h),
             child: Obx(() => CarouselSlider.builder(
@@ -142,7 +142,7 @@ class DashboardPage extends StatelessWidget {
         SizedBox(height: 16.v),
         Obx(() => Container(
             height: 8.v,
-            margin: EdgeInsets.only(left: 135.h,right: 135.h),
+            margin: EdgeInsets.only(left: 135.h, right: 135.h),
             child: AnimatedSmoothIndicator(
                 activeIndex: controller.sliderIndex.value,
                 count: controller
@@ -167,7 +167,9 @@ class DashboardPage extends StatelessWidget {
             child: _buildHeader(
                 title: "lbl_category".tr,
                 seeMoreLink: "lbl_more_category".tr,
-                onTapTitle: (){ onTapTxtMoreCategoryLink();},
+                onTapTitle: () {
+                  onTapTxtMoreCategoryLink();
+                },
                 onTapSeeMoreLink: () {
                   onTapTxtMoreCategoryLink();
                 })),
@@ -211,13 +213,15 @@ class DashboardPage extends StatelessWidget {
   /// Section Widget
   Widget _buildFlashSale1() {
     return SingleChildScrollView(
-      child: Column( crossAxisAlignment: CrossAxisAlignment.start, children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
             padding: EdgeInsets.only(right: 16.h),
             child: _buildHeader(
                 title: "lbl_flash_sale".tr,
                 seeMoreLink: "lbl_see_more".tr,
-                onTapSeeMoreLink: (){ onTapFlashSaleHeader();},
+                onTapSeeMoreLink: () {
+                  onTapFlashSaleHeader();
+                },
                 onTapTitle: () {
                   onTapFlashSaleHeader();
                 })),
@@ -247,8 +251,8 @@ class DashboardPage extends StatelessWidget {
 
   /// Section Widget
   Widget _buildMegaSale1() {
-    return  SingleChildScrollView(
-      child :  Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+    return SingleChildScrollView(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
             padding: EdgeInsets.only(right: 16.h),
             child: _buildHeader(
@@ -284,45 +288,44 @@ class DashboardPage extends StatelessWidget {
 
   /// Common widget
   Widget _buildHeader({
-   required String title,
-   required String seeMoreLink,
-   Function? onTapTitle,
-   Function? onTapSeeMoreLink,
-    Color? color ,
+    required String title,
+    required String seeMoreLink,
+    Function? onTapTitle,
+    Function? onTapSeeMoreLink,
+    Color? color,
   }) {
-   return Container(
-     color: color?? Colors.white,
-    width: double.infinity,  // Set width to take available space
-    child:Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        GestureDetector(
-        onTap: () {
-   onTapTitle!.call();},
-         child: Text(
-          title,
-          style: theme.textTheme.titleSmall!.copyWith(
-           color: theme.colorScheme.onPrimary.withOpacity(1),
+    return Container(
+      color: color ?? Colors.white,
+      width: double.infinity, // Set width to take available space
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          GestureDetector(
+            onTap: () {
+              onTapTitle!.call();
+            },
+            child: Text(
+              title,
+              style: theme.textTheme.titleSmall!.copyWith(
+                color: theme.colorScheme.onPrimary.withOpacity(1),
+              ),
+            ),
           ),
-         ),
-       ),
-       GestureDetector(
-        onTap: () {
-         onTapSeeMoreLink!.call();
-        },
-        child: Text(
-         seeMoreLink,
-         style: CustomTextStyles.titleSmallPrimary.copyWith(
-          color: theme.colorScheme.primary.withOpacity(1),
-         ),
-        ),
-       ),
-      ],
-     ),
-
-   );
+          GestureDetector(
+            onTap: () {
+              onTapSeeMoreLink!.call();
+            },
+            child: Text(
+              seeMoreLink,
+              style: CustomTextStyles.titleSmallPrimary.copyWith(
+                color: theme.colorScheme.primary.withOpacity(1),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
-
 
   /// Navigates to the searchScreen when the action is triggered.
   onTapSearchProduct() {

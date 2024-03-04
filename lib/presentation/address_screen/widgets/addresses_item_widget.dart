@@ -69,7 +69,7 @@ class AddressesItemWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 32.h,right: 16.h),
+                padding: EdgeInsets.only(left: 32.h, right: 16.h),
                 child: Obx(
                   () => Text(
                     addressesItemModelObj.delete!.value,

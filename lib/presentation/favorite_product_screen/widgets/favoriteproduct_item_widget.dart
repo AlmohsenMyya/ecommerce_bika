@@ -95,7 +95,7 @@ class FavoriteproductItemWidget extends StatelessWidget {
                   imagePath: ImageConstant.imgTrashIcon,
                   height: 24.adaptSize,
                   width: 24.adaptSize,
-                  margin: EdgeInsets.only(left: 14.h,right: 14.h),
+                  margin: EdgeInsets.only(left: 14.h, right: 14.h),
                 ),
               ],
             ),

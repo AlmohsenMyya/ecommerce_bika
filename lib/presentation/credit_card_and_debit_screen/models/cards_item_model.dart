@@ -1,16 +1,33 @@
-import '../../../core/app_export.dart';/// This class is used in the [cards_item_widget] screen.
-class CardsItemModel {CardsItemModel({this.debitCardNumber, this.cardholder, this.dominicOvo, this.cardsave, this.debitCardExpiry, this.id, }) { debitCardNumber = debitCardNumber  ?? Rx("6326    9124    8124    9875");cardholder = cardholder  ?? Rx("CARD HOLDER");dominicOvo = dominicOvo  ?? Rx("Dominic Ovo");cardsave = cardsave  ?? Rx("CARD SAVE");debitCardExpiry = debitCardExpiry  ?? Rx("06/24");id = id  ?? Rx(""); }
+import '../../../core/app_export.dart';
 
-Rx<String>? debitCardNumber;
+/// This class is used in the [cards_item_widget] screen.
 
-Rx<String>? cardholder;
+class CardsItemModel {
+  CardsItemModel({
+    this.debitCardNumber,
+    this.cardholder,
+    this.dominicOvo,
+    this.cardsave,
+    this.debitCardExpiry,
+    this.id,
+  }) {
+    debitCardNumber = debitCardNumber ?? Rx("6326    9124    8124    9875");
+    cardholder = cardholder ?? Rx("CARD HOLDER");
+    dominicOvo = dominicOvo ?? Rx("Dominic Ovo");
+    cardsave = cardsave ?? Rx("CARD SAVE");
+    debitCardExpiry = debitCardExpiry ?? Rx("06/24");
+    id = id ?? Rx("");
+  }
 
-Rx<String>? dominicOvo;
+  Rx<String>? debitCardNumber;
 
-Rx<String>? cardsave;
+  Rx<String>? cardholder;
 
-Rx<String>? debitCardExpiry;
+  Rx<String>? dominicOvo;
 
-Rx<String>? id;
+  Rx<String>? cardsave;
 
- }
+  Rx<String>? debitCardExpiry;
+
+  Rx<String>? id;
+}

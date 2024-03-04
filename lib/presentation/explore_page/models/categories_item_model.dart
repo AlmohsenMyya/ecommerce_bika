@@ -1,10 +1,22 @@
-import '../../../core/app_export.dart';/// This class is used in the [categories_item_widget] screen.
-class CategoriesItemModel {CategoriesItemModel({this.manWorkEquipment, this.officeBag, this.id, }) { manWorkEquipment = manWorkEquipment  ?? Rx(ImageConstant.imgManWorkEquipment);officeBag = officeBag  ?? Rx("Office Bag");id = id  ?? Rx(""); }
+import '../../../core/app_export.dart';
 
-Rx<String>? manWorkEquipment;
+/// This class is used in the [categories_item_widget] screen.
 
-Rx<String>? officeBag;
+class CategoriesItemModel {
+  CategoriesItemModel({
+    this.manWorkEquipment,
+    this.officeBag,
+    this.id,
+  }) {
+    manWorkEquipment =
+        manWorkEquipment ?? Rx(ImageConstant.imgManWorkEquipment);
+    officeBag = officeBag ?? Rx("Office Bag");
+    id = id ?? Rx("");
+  }
 
-Rx<String>? id;
+  Rx<String>? manWorkEquipment;
 
- }
+  Rx<String>? officeBag;
+
+  Rx<String>? id;
+}

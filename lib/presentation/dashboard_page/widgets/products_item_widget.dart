@@ -79,7 +79,7 @@ class ProductsItemWidget extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 8.h,right: 8.h),
+                    padding: EdgeInsets.only(left: 8.h, right: 8.h),
                     child: Obx(
                       () => Text(
                         productsItemModelObj.offer!.value,

@@ -45,7 +45,8 @@ class CartPage extends StatelessWidget {
   PreferredSizeWidget _buildAppBar() {
     return CustomAppBar(
         title: AppbarTitle(
-            text: "lbl_your_cart".tr, margin: EdgeInsets.only(left: 16.h,right: 16.h)),
+            text: "lbl_your_cart".tr,
+            margin: EdgeInsets.only(left: 16.h, right: 16.h)),
         actions: [
           AppbarTrailingImage(
               imagePath: ImageConstant.imgNotificationIcon,

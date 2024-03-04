@@ -70,6 +70,7 @@ extension IconButtonStyleHelper on CustomIconButton {
         color: theme.colorScheme.primary.withOpacity(1),
         borderRadius: BorderRadius.circular(16.h),
       );
+
   static BoxDecoration get outlinePrimary => BoxDecoration(
         color: theme.colorScheme.primary.withOpacity(1),
         borderRadius: BorderRadius.circular(36.h),

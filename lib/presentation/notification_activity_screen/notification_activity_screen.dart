@@ -72,7 +72,8 @@ class NotificationActivityScreen
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(color: Colors.red,
+              Container(
+                color: Colors.red,
                 child: CustomImageView(
                     imagePath: ImageConstant.imgTransactionIcon,
                     height: 24.adaptSize,

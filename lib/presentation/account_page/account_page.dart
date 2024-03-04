@@ -40,14 +40,15 @@ class AccountPage extends StatelessWidget {
                       onTapAccountOption: () {
                         onTapAccountOption1();
                       }),
-                  SizedBox(height: 5.v,),
+                  SizedBox(
+                    height: 5.v,
+                  ),
                   _buildAccountOption(
                       bagIcon: ImageConstant.imgLanguageIcon,
                       order: "lbl_change_language".tr,
                       onTapAccountOption: () {
                         onTapChangeLanguage();
-                      }
-                  ),
+                      }),
                 ]))));
   }
 
@@ -55,7 +56,8 @@ class AccountPage extends StatelessWidget {
   PreferredSizeWidget _buildAppBar() {
     return CustomAppBar(
         title: AppbarTitle(
-            text: "lbl_account".tr, margin: EdgeInsets.only(left: 16.h,right: 16.h)),
+            text: "lbl_account".tr,
+            margin: EdgeInsets.only(left: 16.h, right: 16.h)),
         actions: [
           AppbarTrailingImage(
               imagePath: ImageConstant.imgNotificationIcon,
@@ -86,7 +88,8 @@ class AccountPage extends StatelessWidget {
                   height: 24.adaptSize,
                   width: 24.adaptSize),
               Padding(
-                  padding: EdgeInsets.only(left: 16.h, top: 2.v, bottom: 3.v,right: 16.h),
+                  padding: EdgeInsets.only(
+                      left: 16.h, top: 2.v, bottom: 3.v, right: 16.h),
                   child: Text(order,
                       style: theme.textTheme.labelLarge!.copyWith(
                           color: theme.colorScheme.onPrimary.withOpacity(1))))
@@ -106,6 +109,7 @@ class AccountPage extends StatelessWidget {
       AppRoutes.profileScreen,
     );
   }
+
   void onTapChangeLanguage() {
     Get.dialog(
       LanguageDialog(), // You need to create LanguageDialog widget

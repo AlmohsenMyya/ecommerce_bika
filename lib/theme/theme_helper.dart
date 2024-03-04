@@ -166,6 +166,7 @@ class PrimaryColors {
 
   // Blue
   Color get blue50 => Color(0XFF8AA0E5);
+
   Color get blueA200 => Color(0XFF015DDA);
 
   // BlueGray
@@ -188,4 +189,5 @@ class PrimaryColors {
 }
 
 PrimaryColors get appTheme => ThemeHelper().themeColor();
+
 ThemeData get theme => ThemeHelper().themeData();

@@ -99,6 +99,7 @@ class CustomSearchView extends StatelessWidget {
           },
         ),
       );
+
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? "",
         hintStyle: hintStyle ?? theme.textTheme.bodySmall,
