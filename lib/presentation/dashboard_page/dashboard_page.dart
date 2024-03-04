@@ -28,34 +28,48 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-            appBar: _buildAppBar(),
-            body: SizedBox(
-                width: SizeUtils.width,
-                child: SingleChildScrollView(
-                    padding: EdgeInsets.only(top: 27.v),
-                    child: Padding(
-                        padding: EdgeInsets.only(left: 16.h, bottom: 5.v),
-                        child: Column(children: [
-                          _buildOfferBannerTitle(),
-                          SizedBox(height: 25.v),
-                          _buildCategories(),
-                          SizedBox(height: 37.v),
-                          _buildFlashSale1(),
-                          SizedBox(height: 23.v),
-                          _buildMegaSale1(),
-                          SizedBox(height: 29.v),
-                          CustomImageView(
-                              imagePath: ImageConstant.imgRecomendedProduct,
-                              height: 206.v,
-                              width: 343.h,
-                              radius: BorderRadius.circular(5.h),
-                              alignment: Alignment.centerLeft),
-                          SizedBox(height: 16.v),
-                          _buildProducts()
-                        ]))))));
+   return SafeArea(
+    child: Scaffold(
+     appBar: _buildAppBar(),
+     body: SizedBox(
+      width: SizeUtils.width,
+      child: SingleChildScrollView(
+       // Add a height constraint here
+       child: ConstrainedBox(
+        constraints: BoxConstraints(
+         minHeight: MediaQuery.of(context).size.height,
+        ),
+        child: Padding(
+         padding: EdgeInsets.only(top: 27.v, left: 16.h, bottom: 5.v),
+         child: Column(
+          children: [
+           _buildOfferBannerTitle(),
+           SizedBox(height: 25.v),
+           _buildCategories(),
+           SizedBox(height: 37.v),
+           _buildFlashSale1(),
+           SizedBox(height: 23.v),
+           _buildMegaSale1(),
+           SizedBox(height: 29.v),
+           CustomImageView(
+            imagePath: ImageConstant.imgRecomendedProduct,
+            height: 206.v,
+            width: 343.h,
+            radius: BorderRadius.circular(5.h),
+            alignment: Alignment.centerLeft,
+           ),
+           SizedBox(height: 16.v),
+           _buildProducts(),
+          ],
+         ),
+        ),
+       ),
+      ),
+     ),
+    ),
+   );
   }
+
 
   /// Section Widget
   PreferredSizeWidget _buildAppBar() {
@@ -63,10 +77,10 @@ class DashboardPage extends StatelessWidget {
         leadingWidth: 48.h,
         leading: AppbarLeadingImage(
             imagePath: ImageConstant.imgRewind,
-            margin: EdgeInsets.only(left: 32.h, top: 20.v, bottom: 20.v)),
+            margin: EdgeInsets.only(left: 32.h, top: 20.v, bottom: 20.v,right: 16.h)),
         title: AppbarSubtitleOne(
             text: "lbl_search_product".tr,
-            margin: EdgeInsets.only(left: 8.h),
+            margin: EdgeInsets.only(left: 8.h,right: 8.h),
             onTap: () {
               onTapSearchProduct();
             }),
@@ -103,72 +117,77 @@ class DashboardPage extends StatelessWidget {
 
   /// Section Widget
   Widget _buildOfferBannerTitle() {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(
-          padding: EdgeInsets.only(right: 16.h),
-          child: Obx(() => CarouselSlider.builder(
-              options: CarouselOptions(
-                  height: 206.v,
-                  initialPage: 0,
-                  autoPlay: true,
-                  viewportFraction: 1.0,
-                  enableInfiniteScroll: false,
-                  scrollDirection: Axis.horizontal,
-                  onPageChanged: (index, reason) {
-                    controller.sliderIndex.value = index;
-                  }),
-              itemCount: controller
-                  .dashboardModelObj.value.offerbannerItemList.value.length,
-              itemBuilder: (context, index, realIndex) {
-                OfferbannerItemModel model = controller
-                    .dashboardModelObj.value.offerbannerItemList.value[index];
-                return OfferbannerItemWidget(model);
-              }))),
-      SizedBox(height: 16.v),
-      Obx(() => Container(
-          height: 8.v,
-          margin: EdgeInsets.only(left: 135.h),
-          child: AnimatedSmoothIndicator(
-              activeIndex: controller.sliderIndex.value,
-              count: controller
-                  .dashboardModelObj.value.offerbannerItemList.value.length,
-              axisDirection: Axis.horizontal,
-              effect: ScrollingDotsEffect(
-                  spacing: 8,
-                  activeDotColor: theme.colorScheme.primary.withOpacity(1),
-                  dotColor: appTheme.blue50,
-                  dotHeight: 8.v,
-                  dotWidth: 8.h))))
-    ]);
+    return SingleChildScrollView(
+      child:  Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+            padding: EdgeInsets.only(right: 16.h),
+            child: Obx(() => CarouselSlider.builder(
+                options: CarouselOptions(
+                    height: 206.v,
+                    initialPage: 0,
+                    autoPlay: true,
+                    viewportFraction: 1.0,
+                    enableInfiniteScroll: false,
+                    scrollDirection: Axis.horizontal,
+                    onPageChanged: (index, reason) {
+                      controller.sliderIndex.value = index;
+                    }),
+                itemCount: controller
+                    .dashboardModelObj.value.offerbannerItemList.value.length,
+                itemBuilder: (context, index, realIndex) {
+                  OfferbannerItemModel model = controller
+                      .dashboardModelObj.value.offerbannerItemList.value[index];
+                  return OfferbannerItemWidget(model);
+                }))),
+        SizedBox(height: 16.v),
+        Obx(() => Container(
+            height: 8.v,
+            margin: EdgeInsets.only(left: 135.h,right: 135.h),
+            child: AnimatedSmoothIndicator(
+                activeIndex: controller.sliderIndex.value,
+                count: controller
+                    .dashboardModelObj.value.offerbannerItemList.value.length,
+                axisDirection: Axis.horizontal,
+                effect: ScrollingDotsEffect(
+                    spacing: 8,
+                    activeDotColor: theme.colorScheme.primary.withOpacity(1),
+                    dotColor: appTheme.blue50,
+                    dotHeight: 8.v,
+                    dotWidth: 8.h))))
+      ]),
+    );
   }
 
   /// Section Widget
   Widget _buildCategories() {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(
-          padding: EdgeInsets.only(right: 16.h),
-          child: _buildFlashSaleHeader(
-              flashSale: "lbl_category".tr,
-              seeMoreLink: "lbl_more_category".tr,
-              onTapSeeMoreLink: () {
-                onTapTxtMoreCategoryLink();
-              })),
-      SizedBox(height: 10.v),
-      SizedBox(
-          height: 94.v,
-          child: Obx(() => ListView.separated(
-              scrollDirection: Axis.horizontal,
-              separatorBuilder: (context, index) {
-                return SizedBox(width: 12.h);
-              },
-              itemCount: controller
-                  .dashboardModelObj.value.arrowrightItemList.value.length,
-              itemBuilder: (context, index) {
-                ArrowrightItemModel model = controller
-                    .dashboardModelObj.value.arrowrightItemList.value[index];
-                return ArrowrightItemWidget(model);
-              })))
-    ]);
+    return SingleChildScrollView(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+            padding: EdgeInsets.only(right: 16.h),
+            child: _buildHeader(
+                title: "lbl_category".tr,
+                seeMoreLink: "lbl_more_category".tr,
+                onTapTitle: (){ onTapTxtMoreCategoryLink();},
+                onTapSeeMoreLink: () {
+                  onTapTxtMoreCategoryLink();
+                })),
+        SizedBox(height: 10.v),
+        SizedBox(
+            height: 94.v,
+            child: Obx(() => ListView.separated(
+                scrollDirection: Axis.horizontal,
+                separatorBuilder: (context, index) {
+                  return SizedBox(width: 12.h);
+                },
+                itemCount: controller
+                    .dashboardModelObj.value.arrowrightItemList.value.length,
+                itemBuilder: (context, index) {
+                  ArrowrightItemModel model = controller
+                      .dashboardModelObj.value.arrowrightItemList.value[index];
+                  return ArrowrightItemWidget(model);
+                })))
+      ]),
+    );
   }
 
   /// Section Widget
@@ -191,18 +210,21 @@ class DashboardPage extends StatelessWidget {
 
   /// Section Widget
   Widget _buildFlashSale1() {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(
-          padding: EdgeInsets.only(right: 16.h),
-          child: _buildFlashSaleHeader(
-              flashSale: "lbl_flash_sale".tr,
-              seeMoreLink: "lbl_see_more".tr,
-              onTapFlashSaleHeader: () {
-                onTapFlashSaleHeader();
-              })),
-      SizedBox(height: 12.v),
-      _buildFlashSale()
-    ]);
+    return SingleChildScrollView(
+      child: Column( crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+            padding: EdgeInsets.only(right: 16.h),
+            child: _buildHeader(
+                title: "lbl_flash_sale".tr,
+                seeMoreLink: "lbl_see_more".tr,
+                onTapSeeMoreLink: (){ onTapFlashSaleHeader();},
+                onTapTitle: () {
+                  onTapFlashSaleHeader();
+                })),
+        SizedBox(height: 12.v),
+        _buildFlashSale()
+      ]),
+    );
   }
 
   /// Section Widget
@@ -225,14 +247,16 @@ class DashboardPage extends StatelessWidget {
 
   /// Section Widget
   Widget _buildMegaSale1() {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Padding(
-          padding: EdgeInsets.only(right: 16.h),
-          child: _buildFlashSaleHeader(
-              flashSale: "lbl_mega_sale".tr, seeMoreLink: "lbl_see_more".tr)),
-      SizedBox(height: 10.v),
-      _buildMegaSale()
-    ]);
+    return  SingleChildScrollView(
+      child :  Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+            padding: EdgeInsets.only(right: 16.h),
+            child: _buildHeader(
+                title: "lbl_mega_sale".tr, seeMoreLink: "lbl_see_more".tr)),
+        SizedBox(height: 10.v),
+        _buildMegaSale()
+      ]),
+    );
   }
 
   /// Section Widget
@@ -259,29 +283,46 @@ class DashboardPage extends StatelessWidget {
   }
 
   /// Common widget
-  Widget _buildFlashSaleHeader({
-    required String flashSale,
-    required String seeMoreLink,
-    Function? onTapFlashSaleHeader,
-    Function? onTapSeeMoreLink,
+  Widget _buildHeader({
+   required String title,
+   required String seeMoreLink,
+   Function? onTapTitle,
+   Function? onTapSeeMoreLink,
+    Color? color ,
   }) {
-    return GestureDetector(
+   return Container(
+     color: color?? Colors.white,
+    width: double.infinity,  // Set width to take available space
+    child:Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        GestureDetector(
         onTap: () {
-          onTapFlashSaleHeader!.call();
+   onTapTitle!.call();},
+         child: Text(
+          title,
+          style: theme.textTheme.titleSmall!.copyWith(
+           color: theme.colorScheme.onPrimary.withOpacity(1),
+          ),
+         ),
+       ),
+       GestureDetector(
+        onTap: () {
+         onTapSeeMoreLink!.call();
         },
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Text(flashSale,
-              style: theme.textTheme.titleSmall!
-                  .copyWith(color: theme.colorScheme.onPrimary.withOpacity(1))),
-          GestureDetector(onTap: () {
-            onTapSeeMoreLink!.call();
-          }),
-          Text(seeMoreLink,
-              style: CustomTextStyles.titleSmallPrimary
-                  .copyWith(color: theme.colorScheme.primary.withOpacity(1)))
-        ]));
+        child: Text(
+         seeMoreLink,
+         style: CustomTextStyles.titleSmallPrimary.copyWith(
+          color: theme.colorScheme.primary.withOpacity(1),
+         ),
+        ),
+       ),
+      ],
+     ),
+
+   );
   }
+
 
   /// Navigates to the searchScreen when the action is triggered.
   onTapSearchProduct() {

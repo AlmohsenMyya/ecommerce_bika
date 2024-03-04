@@ -36,7 +36,7 @@ class OfferbannerItemWidget extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: EdgeInsets.only(left: 24.h),
+              padding: EdgeInsets.only(left: 24.h,right: 24.h),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +83,7 @@ class OfferbannerItemWidget extends StatelessWidget {
                       ),
                       Container(
                         width: 42.h,
-                        margin: EdgeInsets.only(left: 4.h),
+                        margin: EdgeInsets.only(left: 4.h,right: 4.h),
                         padding: EdgeInsets.symmetric(
                           horizontal: 9.h,
                           vertical: 8.v,
@@ -110,7 +110,7 @@ class OfferbannerItemWidget extends StatelessWidget {
                       ),
                       Container(
                         width: 42.h,
-                        margin: EdgeInsets.only(left: 4.h),
+                        margin: EdgeInsets.only(left: 4.h,right: 4.h),
                         padding: EdgeInsets.symmetric(
                           horizontal: 10.h,
                           vertical: 8.v,

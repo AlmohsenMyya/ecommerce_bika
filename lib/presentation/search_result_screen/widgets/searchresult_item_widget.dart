@@ -76,7 +76,7 @@ class SearchresultItemWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 8.h),
+                padding: EdgeInsets.only(left: 8.h,right: 8.h),
                 child: Obx(
                   () => Text(
                     searchresultItemModelObj.offer!.value,

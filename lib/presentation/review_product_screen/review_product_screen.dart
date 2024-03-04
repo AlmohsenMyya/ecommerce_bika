@@ -2,7 +2,7 @@ import '../review_product_screen/widgets/reviewproduct_item_widget.dart';import 
 
 @override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(vertical: 9.v), child: Column(children: [SizedBox(height: 18.v), _buildReviewProduct()])), bottomNavigationBar: _buildWriteReview())); } 
 /// Section Widget
-PreferredSizeWidget _buildAppBar() { return CustomAppBar(leadingWidth: 43.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowLeft, margin: EdgeInsets.only(left: 19.h, top: 16.v, bottom: 15.v), onTap: () {onTapArrowLeft();}), title: AppbarSubtitle(text: "lbl_5_review2".tr, margin: EdgeInsets.only(left: 12.h))); } 
+PreferredSizeWidget _buildAppBar() { return CustomAppBar(leadingWidth: 43.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowLeft, margin: EdgeInsets.only(left: 19.h, top: 16.v, bottom: 15.v,right: 19.h), onTap: () {onTapArrowLeft();}), title: AppbarSubtitle(text: "lbl_5_review2".tr, margin: EdgeInsets.only(left: 12.h))); }
 /// Section Widget
 Widget _buildReviewProduct() { return Expanded(child: Padding(padding: EdgeInsets.only(left: 19.h, right: 23.h), child: Obx(() => ListView.separated(physics: BouncingScrollPhysics(), shrinkWrap: true, separatorBuilder: (context, index) {return SizedBox(height: 32.v);}, itemCount: controller.reviewProductModelObj.value.reviewproductItemList.value.length, itemBuilder: (context, index) {ReviewproductItemModel model = controller.reviewProductModelObj.value.reviewproductItemList.value[index]; return ReviewproductItemWidget(model);})))); } 
 /// Section Widget

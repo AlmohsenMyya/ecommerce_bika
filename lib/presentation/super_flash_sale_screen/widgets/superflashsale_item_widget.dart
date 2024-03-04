@@ -38,7 +38,7 @@ class SuperflashsaleItemWidget extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: EdgeInsets.only(left: 24.h),
+              padding: EdgeInsets.only(left: 24.h,right: 24.h),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,

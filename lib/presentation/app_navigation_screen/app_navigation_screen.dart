@@ -233,7 +233,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
           Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: EdgeInsets.only(left: 20.h),
+              padding: EdgeInsets.only(left: 20.h,right: 16.h),
               child: Text(
                 "Check your app's UI from the below demo screens of your app."
                     .tr,

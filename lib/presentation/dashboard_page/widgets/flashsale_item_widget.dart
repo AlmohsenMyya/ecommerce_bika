@@ -24,64 +24,66 @@ class FlashsaleItemWidget extends StatelessWidget {
         borderRadius: BorderRadiusStyle.roundedBorder5,
       ),
       width: 141.h,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Obx(
-            () => CustomImageView(
-              imagePath: flashsaleItemModelObj.image!.value,
-              height: 109.adaptSize,
-              width: 109.adaptSize,
-              radius: BorderRadius.circular(
-                5.h,
-              ),
-            ),
-          ),
-          SizedBox(height: 7.v),
-          SizedBox(
-            width: 105.h,
-            child: Obx(
-              () => Text(
-                flashsaleItemModelObj.fSNikeAirMax!.value,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.labelLarge!.copyWith(
-                  height: 1.50,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Obx(
+              () => CustomImageView(
+                imagePath: flashsaleItemModelObj.image!.value,
+                height: 109.adaptSize,
+                width: 109.adaptSize,
+                radius: BorderRadius.circular(
+                  5.h,
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 10.v),
-          Obx(
-            () => Text(
-              flashsaleItemModelObj.price!.value,
-              style: CustomTextStyles.labelLargePrimary,
-            ),
-          ),
-          SizedBox(height: 9.v),
-          Row(
-            children: [
-              Obx(
+            SizedBox(height: 7.v),
+            SizedBox(
+              width: 105.h,
+              child: Obx(
                 () => Text(
-                  flashsaleItemModelObj.price1!.value,
-                  style: CustomTextStyles.bodySmall10.copyWith(
-                    decoration: TextDecoration.lineThrough,
+                  flashsaleItemModelObj.fSNikeAirMax!.value,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.labelLarge!.copyWith(
+                    height: 1.50,
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 8.h),
-                child: Obx(
+            ),
+            SizedBox(height: 10.v),
+            Obx(
+              () => Text(
+                flashsaleItemModelObj.price!.value,
+                style: CustomTextStyles.labelLargePrimary,
+              ),
+            ),
+            SizedBox(height: 9.v),
+            Row(
+              children: [
+                Obx(
                   () => Text(
-                    flashsaleItemModelObj.offer!.value,
-                    style: theme.textTheme.labelMedium,
+                    flashsaleItemModelObj.price1!.value,
+                    style: CustomTextStyles.bodySmall10.copyWith(
+                      decoration: TextDecoration.lineThrough,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+                Padding(
+                  padding: EdgeInsets.only(left: 8.h,right: 8.h),
+                  child: Obx(
+                    () => Text(
+                      flashsaleItemModelObj.offer!.value,
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

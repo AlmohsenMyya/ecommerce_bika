@@ -69,7 +69,7 @@ class ShiptoItemWidget extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 32.h),
+                padding: EdgeInsets.only(left: 32.h,right: 32.h),
                 child: Obx(
                   () => Text(
                     shiptoItemModelObj.delete!.value,

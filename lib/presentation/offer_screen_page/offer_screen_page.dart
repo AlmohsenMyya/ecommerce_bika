@@ -6,7 +6,7 @@ OfferScreenController controller = Get.put(OfferScreenController(OfferScreenMode
 
 @override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 28.v), child: Column(children: [_buildCuponPromotion(), SizedBox(height: 16.v), _buildOfferScreen()])))); } 
 /// Section Widget
-PreferredSizeWidget _buildAppBar() { return CustomAppBar(title: AppbarTitle(text: "lbl_offer".tr, margin: EdgeInsets.only(left: 16.h)), actions: [AppbarTrailingImage(imagePath: ImageConstant.imgNotificationIcon, margin: EdgeInsets.fromLTRB(13.h, 16.v, 13.h, 15.v), onTap: () {onTapNotificationIcon();})]); } 
+PreferredSizeWidget _buildAppBar() { return CustomAppBar(title: AppbarTitle(text: "lbl_offer".tr, margin: EdgeInsets.only(left: 16.h,right: 16.h)), actions: [AppbarTrailingImage(imagePath: ImageConstant.imgNotificationIcon, margin: EdgeInsets.fromLTRB(13.h, 16.v, 13.h, 15.v), onTap: () {onTapNotificationIcon();})]); }
 /// Section Widget
 Widget _buildCuponPromotion() { return Container(width: 343.h, padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 14.v), decoration: AppDecoration.fillPrimary.copyWith(borderRadius: BorderRadiusStyle.roundedBorder5), child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(height: 3.v), SizedBox(width: 201.h, child: Text("msg_use_megsl_cupon".tr, maxLines: 2, overflow: TextOverflow.ellipsis, style: CustomTextStyles.titleMediumOnPrimaryContainer.copyWith(height: 1.50)))])); } 
 /// Section Widget
