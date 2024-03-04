@@ -67,6 +67,8 @@ class ImageConstant {
 
   // Account images
   static String imgLockPrimary = '$imagePath/img_lock_primary.svg';
+  // Account images
+  static String imgLanguageIcon = '$imagePath/img_lock_primary.svg';
 
   static String imgBagIcon = '$imagePath/img_bag_icon.svg';
 

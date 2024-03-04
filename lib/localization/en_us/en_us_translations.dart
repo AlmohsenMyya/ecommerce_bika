@@ -34,7 +34,6 @@ final Map<String, String> enUs = {
 
   // Favorite Product Screen
   "msg_favorite_product": "Favorite Product",
-
   // Product Detail Screen
   "lbl_4_5": "4.5",
   "lbl_5_review": "(5 Review)",
@@ -95,7 +94,7 @@ final Map<String, String> enUs = {
   "msg_transaction_nike": "Transaction Nike Air Zoom Product",
   "msg_transaction_nike2": "Transaction Nike Air Max",
   "msg_transaction_nike3": "Transaction Nike Air Max 2",
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Explore Screen
   "lbl_bag": "Bag",
   "lbl_heels": "Heels",
@@ -204,7 +203,7 @@ final Map<String, String> enUs = {
   // Change Password Screen
   "lbl_new_password": "New Password", "lbl_old_password": "Old Password",
   "msg_new_password_again": "New Password Again",
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Order Screen
   "lbl_items": "Items",
   "lbl_order_status": "Order Status",
@@ -262,7 +261,7 @@ final Map<String, String> enUs = {
   "lbl_lailyfa_febrina": "Lailyfa Febrina",
   "msg_1231_2312_3123": "1231 - 2312 - 3123 - 1231",
   "msg_lailyfa_febrina": "Lailyfa Febrina Card",
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////
   // Common String
   "lbl": ":",
   "lbl_06_24": "06/24",
@@ -291,6 +290,7 @@ final Map<String, String> enUs = {
   "lbl_card_save": "CARD SAVE",
   "lbl_category": "Category",
   "lbl_change_password": "Change Password",
+  "lbl_change_language":"change language",
   "lbl_delete": "Delete",
   "lbl_dominic_ovo": "Dominic Ovo",
   "lbl_dress": "Dress",
