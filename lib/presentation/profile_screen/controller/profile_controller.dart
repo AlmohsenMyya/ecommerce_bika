@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/profile_screen/models/profile_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/profile_screen/models/profile_model.dart';
 
 /// A controller class for the ProfileScreen.
 ///

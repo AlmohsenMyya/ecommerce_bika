@@ -1,8 +1,8 @@
 import 'controller/search_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_title_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_title_searchview_one.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_title_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_title_searchview_one.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart' hide SearchController;
 
 class SearchScreen extends GetWidget<SearchController> {

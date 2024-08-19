@@ -1,11 +1,11 @@
 import '../address_screen/widgets/addresses_item_widget.dart';
 import 'controller/address_controller.dart';
 import 'models/addresses_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_leading_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_subtitle.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_leading_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_subtitle.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class AddressScreen extends GetWidget<AddressController> {

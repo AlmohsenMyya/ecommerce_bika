@@ -1,5 +1,5 @@
 import 'controller/app_navigation_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore_for_file: must_be_immutable

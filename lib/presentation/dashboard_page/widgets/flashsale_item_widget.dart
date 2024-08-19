@@ -1,6 +1,6 @@
 import '../controller/dashboard_controller.dart';
 import '../models/flashsale_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

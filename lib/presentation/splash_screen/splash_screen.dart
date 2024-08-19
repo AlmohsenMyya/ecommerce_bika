@@ -1,5 +1,5 @@
 import 'controller/splash_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends GetWidget<SplashController> {

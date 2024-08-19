@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/product_detail_page/models/product_detail_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/product_detail_page/models/product_detail_model.dart';
 
 /// A controller class for the ProductDetailPage.
 ///

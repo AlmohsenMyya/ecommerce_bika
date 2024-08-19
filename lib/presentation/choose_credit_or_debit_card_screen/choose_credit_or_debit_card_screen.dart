@@ -2,12 +2,12 @@ import '../choose_credit_or_debit_card_screen/widgets/user_item_widget.dart';
 import 'controller/choose_credit_or_debit_card_controller.dart';
 import 'models/user_item_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_leading_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_subtitle.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_trailing_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_leading_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_subtitle.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_trailing_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

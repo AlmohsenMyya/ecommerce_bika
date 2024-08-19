@@ -1,13 +1,13 @@
 import 'controller/login_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/core/utils/validation_functions.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_icon_button.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_outlined_button.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_text_form_field.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/core/utils/validation_functions.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/widgets/custom_icon_button.dart';
+import 'package:almohsen_ecommerce/widgets/custom_outlined_button.dart';
+import 'package:almohsen_ecommerce/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:dhiwise_ecommerce/domain/googleauth/google_auth_helper.dart';
-import 'package:dhiwise_ecommerce/domain/facebookauth/facebook_auth_helper.dart';
+import 'package:almohsen_ecommerce/domain/googleauth/google_auth_helper.dart';
+import 'package:almohsen_ecommerce/domain/facebookauth/facebook_auth_helper.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginScreen extends GetWidget<LoginController> {

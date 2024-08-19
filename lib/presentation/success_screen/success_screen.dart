@@ -1,7 +1,7 @@
 import 'controller/success_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_icon_button.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
 class SuccessScreen extends GetWidget<SuccessController> {

@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/data/apiClient/api_client.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/data/apiClient/api_client.dart';
 
 class InitialBindings extends Bindings {
   @override

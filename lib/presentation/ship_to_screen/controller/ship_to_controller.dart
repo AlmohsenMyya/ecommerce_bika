@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/ship_to_screen/models/ship_to_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/ship_to_screen/models/ship_to_model.dart';
 
 /// A controller class for the ShipToScreen.
 ///

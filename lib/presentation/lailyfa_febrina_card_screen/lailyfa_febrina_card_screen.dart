@@ -1,10 +1,10 @@
 import 'controller/lailyfa_febrina_card_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_leading_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_subtitle.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_text_form_field.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_leading_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_subtitle.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LailyfaFebrinaCardScreen extends GetWidget<LailyfaFebrinaCardController> {

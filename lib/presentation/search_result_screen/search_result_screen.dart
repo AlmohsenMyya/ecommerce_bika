@@ -1,11 +1,11 @@
 import '../search_result_screen/widgets/searchresult_item_widget.dart';
 import 'controller/search_result_controller.dart';
 import 'models/searchresult_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_title_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_title_searchview_two.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_drop_down.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_title_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_title_searchview_two.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/widgets/custom_drop_down.dart';
 import 'package:flutter/material.dart';
 
 class SearchResultScreen extends GetWidget<SearchResultController> {

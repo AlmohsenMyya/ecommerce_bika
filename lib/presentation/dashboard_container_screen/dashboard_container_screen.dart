@@ -1,11 +1,11 @@
 import 'controller/dashboard_container_controller.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/account_page/account_page.dart';
-import 'package:dhiwise_ecommerce/presentation/cart_page/cart_page.dart';
-import 'package:dhiwise_ecommerce/presentation/dashboard_page/dashboard_page.dart';
-import 'package:dhiwise_ecommerce/presentation/explore_page/explore_page.dart';
-import 'package:dhiwise_ecommerce/presentation/offer_screen_page/offer_screen_page.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_bottom_bar.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/account_page/account_page.dart';
+import 'package:almohsen_ecommerce/presentation/cart_page/cart_page.dart';
+import 'package:almohsen_ecommerce/presentation/dashboard_page/dashboard_page.dart';
+import 'package:almohsen_ecommerce/presentation/explore_page/explore_page.dart';
+import 'package:almohsen_ecommerce/presentation/offer_screen_page/offer_screen_page.dart';
+import 'package:almohsen_ecommerce/widgets/custom_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 class DashboardContainerScreen extends GetWidget<DashboardContainerController> {

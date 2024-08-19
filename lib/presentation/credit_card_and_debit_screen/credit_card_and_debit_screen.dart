@@ -1,11 +1,11 @@
 import '../credit_card_and_debit_screen/widgets/cards_item_widget.dart';
 import 'controller/credit_card_and_debit_controller.dart';
 import 'models/cards_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_leading_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_subtitle.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_leading_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_subtitle.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class CreditCardAndDebitScreen extends GetWidget<CreditCardAndDebitController> {

@@ -191,14 +191,14 @@ final Map<String, String> enUs = {
   "msg_use_megsl_cupon": "Use “MEGSL” Cupon For Get 90%off",
 
   // Profile Screen
-  "lbl_12_12_2000": "12-12-2000",
+  "lbl_12_12_2000": "21-9-1999",
   "lbl_307_555_0133": "(307) 555-0133",
   "lbl_birthday": "Birthday",
-  "lbl_dominic_ovo2": "@dominic_ovo",
+  "lbl_dominic_ovo2": "@eng.almohsen",
   "lbl_email": "Email",
   "lbl_gender": "Gender",
   "lbl_male": "Male",
-  "msg_rex4dom_gmail_com": "rex4dom@gmail.com",
+  "msg_rex4dom_gmail_com": "mostaql.com/u/Almohsn_Myya",
 
   // Change Password Screen
   "lbl_new_password": "New Password", "lbl_old_password": "Old Password",
@@ -292,7 +292,7 @@ final Map<String, String> enUs = {
   "lbl_change_password": "Change Password",
   "lbl_change_language":"change language",
   "lbl_delete": "Delete",
-  "lbl_dominic_ovo": "Dominic Ovo",
+  "lbl_dominic_ovo": "Almohsen Myya",
   "lbl_dress": "Dress",
   "lbl_edit": "Edit",
   "lbl_expiration_date": "Expiration Date",

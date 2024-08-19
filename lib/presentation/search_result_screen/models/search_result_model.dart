@@ -1,4 +1,4 @@
-import 'package:dhiwise_ecommerce/data/models/selectionPopupModel/selection_popup_model.dart';
+import 'package:almohsen_ecommerce/data/models/selectionPopupModel/selection_popup_model.dart';
 import '../../../core/app_export.dart';
 import 'searchresult_item_model.dart';
 

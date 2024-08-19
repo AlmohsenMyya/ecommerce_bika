@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/lailyfa_febrina_card_screen/models/lailyfa_febrina_card_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/lailyfa_febrina_card_screen/models/lailyfa_febrina_card_model.dart';
 import 'package:flutter/material.dart';
 
 /// A controller class for the LailyfaFebrinaCardScreen.

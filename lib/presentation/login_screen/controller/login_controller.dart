@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/login_screen/models/login_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/login_screen/models/login_model.dart';
 import 'package:flutter/material.dart';
 
 /// A controller class for the LoginScreen.

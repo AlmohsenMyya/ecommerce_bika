@@ -1,11 +1,11 @@
 import '../review_product_screen/widgets/reviewproduct_item_widget.dart';
 import 'controller/review_product_controller.dart';
 import 'models/reviewproduct_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_leading_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_subtitle.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_leading_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_subtitle.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class ReviewProductScreen extends GetWidget<ReviewProductController> {

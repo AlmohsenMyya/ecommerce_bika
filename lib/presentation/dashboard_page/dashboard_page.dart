@@ -11,11 +11,11 @@ import 'models/megasale_item_model.dart';
 import 'models/offerbanner_item_model.dart';
 import 'models/products_item_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_leading_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_subtitle_one.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_trailing_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_leading_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_subtitle_one.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_trailing_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

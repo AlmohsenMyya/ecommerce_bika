@@ -4,10 +4,10 @@ import 'controller/explore_controller.dart';
 import 'models/categories1_item_model.dart';
 import 'models/categories_item_model.dart';
 import 'models/explore_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_title_searchview.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/appbar_trailing_image.dart';
-import 'package:dhiwise_ecommerce/widgets/app_bar/custom_app_bar.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_title_searchview.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/appbar_trailing_image.dart';
+import 'package:almohsen_ecommerce/widgets/app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 // ignore_for_file: must_be_immutable

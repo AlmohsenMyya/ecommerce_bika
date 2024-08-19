@@ -23,10 +23,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: theme,
         translations: AppLocalization(),
-        locale: Get.deviceLocale,
+        locale: Locale('ar', 'SU'),
         //for setting localization strings
-        fallbackLocale: Locale('en', 'US'),
-        title: 'dhiwise_ecommerce',
+        fallbackLocale: Locale('ar', 'SU'),
+        title: 'almohsen_ecommerce',
         initialBinding: InitialBindings(),
         initialRoute: AppRoutes.initialRoute,
         getPages: AppRoutes.pages,

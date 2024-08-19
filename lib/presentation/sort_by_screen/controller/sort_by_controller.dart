@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/sort_by_screen/models/sort_by_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/sort_by_screen/models/sort_by_model.dart';
 
 /// A controller class for the SortByScreen.
 ///

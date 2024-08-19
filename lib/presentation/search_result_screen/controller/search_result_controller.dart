@@ -1,5 +1,5 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/presentation/search_result_screen/models/search_result_model.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/search_result_screen/models/search_result_model.dart';
 import 'package:flutter/material.dart';
 
 /// A controller class for the SearchResultScreen.

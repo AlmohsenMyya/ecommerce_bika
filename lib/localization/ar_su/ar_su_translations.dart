@@ -191,14 +191,14 @@ final Map<String, String> arSu = {
 "msg_use_megsl_cupon": "استخدم قسيمة 'MEGSL' للحصول على خصم 90%",
 
 // Profile Screen
-"lbl_12_12_2000": "12-12-2000",
+"lbl_12_12_2000": "21-9-1999",
 "lbl_307_555_0133": "307-555-0133",
 "lbl_birthday": "تاريخ الميلاد",
-"lbl_dominic_ovo2": "@dominic_ovo",
+"lbl_dominic_ovo2": "@ِeng.almohsen",
 "lbl_email": "البريد الإلكتروني",
 "lbl_gender": "الجنس",
 "lbl_male": "ذكر",
-"msg_rex4dom_gmail_com": "rex4dom@gmail.com",
+"msg_rex4dom_gmail_com": "mostaql.com/u/Almohsn_Myya",
 
 // Change Password Screen
 "lbl_new_password": "كلمة المرور الجديدة", "lbl_old_password": "كلمة المرور القديمة",
@@ -292,7 +292,7 @@ final Map<String, String> arSu = {
 "lbl_change_password": "تغيير كلمة المرور",
   "lbl_change_language":"تغيير اللغة",
 "lbl_delete": "حذف",
-"lbl_dominic_ovo": "دومينيك أوفو",
+"lbl_dominic_ovo": "المحسن ميا",
 "lbl_dress": "فستان",
 "lbl_edit": "تعديل",
 "lbl_expiration_date": "تاريخ الانتهاء",

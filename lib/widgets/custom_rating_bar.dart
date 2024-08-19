@@ -1,4 +1,4 @@
-import 'package:dhiwise_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 

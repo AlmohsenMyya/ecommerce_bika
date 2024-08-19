@@ -6,9 +6,9 @@ import 'models/blue_item_model.dart';
 import 'models/product_detail_model.dart';
 import 'models/products1_item_model.dart';
 import 'models/recomended_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_elevated_button.dart';
-import 'package:dhiwise_ecommerce/widgets/custom_rating_bar.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/widgets/custom_elevated_button.dart';
+import 'package:almohsen_ecommerce/widgets/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 
 // ignore_for_file: must_be_immutable

@@ -1,6 +1,6 @@
 import '../controller/product_detail_controller.dart';
 import '../models/products1_item_model.dart';
-import 'package:dhiwise_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
