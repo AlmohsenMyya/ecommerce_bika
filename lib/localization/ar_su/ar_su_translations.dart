@@ -11,7 +11,8 @@ final Map<String, String> arSu = {
 "msg_welcome_to_e_com": "مرحبًا بك في E-com",
 
 // شاشة التسجيل
-"lbl_full_name": "الاسم الكامل",
+"lbl_ar_full_name": "الاسم العربي الكامل",
+  "lbl_en_full_name":"الاسم الاجنبي الكامل",
 "lbl_password_again": "تأكيد كلمة المرور",
 "lbl_sign_up": "الاشتراك",
 "msg_create_an_new_account": "إنشاء حساب جديد",

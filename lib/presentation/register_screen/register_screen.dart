@@ -31,7 +31,9 @@ class RegisterScreen extends GetWidget<RegisterController> {
                                 children: [
                                   _buildPageHeader(),
                                   SizedBox(height: 30.v),
-                                  _buildFullName(),
+                                  _buildArFullName(),
+                                  SizedBox(height: 8.v),
+                                  _buildEnFullName(),
                                   SizedBox(height: 8.v),
                                   _buildEmail(),
                                   SizedBox(height: 8.v),
@@ -74,10 +76,30 @@ class RegisterScreen extends GetWidget<RegisterController> {
   }
 
   /// Section Widget
-  Widget _buildFullName() {
+  Widget _buildArFullName() {
     return CustomTextFormField(
-        controller: controller.fullNameController,
-        hintText: "lbl_full_name".tr,
+        controller: controller.fullNameArController,
+        hintText: "lbl_ar_full_name".tr,
+        prefix: Container(
+            margin: EdgeInsets.fromLTRB(16.h, 12.v, 10.h, 12.v),
+            child: CustomImageView(
+                imagePath: ImageConstant.imgLock,
+                height: 24.adaptSize,
+                width: 24.adaptSize)),
+        prefixConstraints: BoxConstraints(maxHeight: 48.v),
+        validator: (value) {
+          if (!isText(value)) {
+            return "err_msg_please_enter_valid_text".tr;
+          }
+          return null;
+        },
+        contentPadding: EdgeInsets.only(top: 15.v, right: 30.h, bottom: 15.v));
+  }
+  /// Section Widget
+  Widget _buildEnFullName() {
+    return CustomTextFormField(
+        controller: controller.fullNameEnController,
+        hintText: "lbl_en_full_name".tr,
         prefix: Container(
             margin: EdgeInsets.fromLTRB(16.h, 12.v, 10.h, 12.v),
             child: CustomImageView(
@@ -142,7 +164,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
   /// Section Widget
   Widget _buildPassword1() {
     return CustomTextFormField(
-        controller: controller.passwordController1,
+        controller: controller.confirmPasswordController,
         hintText: "lbl_password_again".tr,
         textInputAction: TextInputAction.done,
         textInputType: TextInputType.visiblePassword,
@@ -167,8 +189,8 @@ class RegisterScreen extends GetWidget<RegisterController> {
   Widget _buildSignUp() {
     return CustomElevatedButton(
         text: "lbl_sign_up".tr,
-        onPressed: () {
-          onTapSignUp();
+        onPressed: () async {
+         await controller.registerUser();
         });
   }
 

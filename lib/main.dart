@@ -6,6 +6,8 @@ import 'core/app_export.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  Logger.init(LogMode.debug);
+  Logger.log("Application started", level: LogLevel.info);
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((value) {

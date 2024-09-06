@@ -11,7 +11,8 @@ final Map<String, String> enUs = {
   "msg_welcome_to_e_com": "Welcome to E-com",
 
   // Register Screen
-  "lbl_full_name": "Full Name",
+  "lbl_ar_full_name": "Arabic Full Name",
+  "lbl_en_full_name":"English Full Name",
   "lbl_password_again": "Password Again",
   "lbl_sign_up": "Sign Up",
   "msg_create_an_new_account": "Create an new account",
