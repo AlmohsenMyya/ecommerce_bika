@@ -88,8 +88,8 @@ class LoginScreen extends GetWidget<LoginController> {
                               SizedBox(height: 16.v),
                               CustomElevatedButton(
                                   text: "lbl_sign_in".tr,
-                                  onPressed: () {
-                                    onTapSignIn();
+                                  onPressed: () async{
+                                    await controller.loginUser();
                                   }),
                               SizedBox(height: 18.v),
                               _buildOrLine(),
@@ -180,12 +180,6 @@ class LoginScreen extends GetWidget<LoginController> {
     ]);
   }
 
-  /// Navigates to the dashboardContainerScreen when the action is triggered.
-  onTapSignIn() {
-    Get.toNamed(
-      AppRoutes.dashboardContainerScreen,
-    );
-  }
 
   onTapLoginWithGoogle() async {
     await GoogleAuthHelper().googleSignInProcess().then((googleUser) {
