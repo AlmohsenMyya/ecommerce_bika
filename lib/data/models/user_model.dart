@@ -1,21 +1,24 @@
+import 'dart:io';
+
 class UserModel {
-  final String id;
+  final int? id;
   final String nameEn;
-  final String nameAr;
+  final String? nameAr;
   final String usernameEn;
-  final String usernameAr;
+  final String? usernameAr;
   final String email;
   final String phoneNumber;
-  final String password;
+  final String? password;
   final String sexEn;
   final String sexAr;
   final String dateOfBirth;
-  final String? image;
+  final File? image;
+  final String? imageUrl;
   final String createdAt;
   final String updatedAt;
 
   UserModel({
-    required this.id,
+     this.id,
     required this.nameEn,
     required this.nameAr,
     required this.usernameEn,
@@ -27,6 +30,7 @@ class UserModel {
     required this.sexAr,
     required this.dateOfBirth,
     this.image,
+    this.imageUrl,
     required this.createdAt,
     required this.updatedAt,
   });
@@ -44,7 +48,7 @@ class UserModel {
       sexEn: json['sex_en'],
       sexAr: json['sex_ar'],
       dateOfBirth: json['date_of_birth'],
-      image: json['image'],
+      imageUrl: json['image'],
       createdAt: json['created_at'],
       updatedAt: json['updated_at'],
     );

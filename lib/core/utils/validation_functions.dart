@@ -19,12 +19,19 @@ isInputStringValid = regExp.hasMatch(inputString) ;
 }
 
 return isInputStringValid; } /// Password should have,
+//
 /// at least a upper case letter
 ///  at least a lower case letter
 ///  at least a digit
 ///  at least a special character [@#$%^&+=]
 ///  length of at least 4
 /// no white space allowed
+bool isAdult(DateTime dateOfBirth) {
+  DateTime today = DateTime.now();
+  DateTime adultDate = DateTime(today.year - 18, today.month, today.day);
+  return dateOfBirth.isBefore(adultDate);
+}
+
 bool isValidPassword(String? inputString, {bool isRequired = false, }) { 
 bool isInputStringValid = false;
 

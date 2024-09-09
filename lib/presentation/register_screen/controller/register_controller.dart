@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:almohsen_ecommerce/core/app_export.dart';
+import 'package:almohsen_ecommerce/presentation/dashboard_container_screen/dashboard_container_screen.dart';
 import 'package:almohsen_ecommerce/presentation/register_screen/models/register_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../core/utils/prefs/auth_pref.dart';
+import '../../../core/utils/validation_functions.dart';
 import '../../../data/models/user_model.dart';
 import '../../../data/repository/auth_repo.dart';
 
@@ -24,6 +28,8 @@ class RegisterController extends GetxController {
   TextEditingController sexEnController = TextEditingController();
   TextEditingController sexArController = TextEditingController();
   TextEditingController dateOfBirthController = TextEditingController();
+  File? profileImage ;
+  RxString selectedGender = ''.obs;
 
   // Observable model for state management
   Rx<RegisterModel> registerModelObj = RegisterModel().obs;
@@ -47,18 +53,18 @@ class RegisterController extends GetxController {
 
         // Create UserModel from form data
         UserModel userModel = UserModel(
-          id: '', // This will be filled by the server
+          // id: , // This will be filled by the server
           nameEn: fullNameEnController.text,
           nameAr: fullNameArController.text,
-          usernameEn: "usernameEnController.text",
-          usernameAr: "usernameArController.text",
+          usernameEn: usernameEnController.text,
+          usernameAr: usernameArController.text,
           email: emailController.text,
-          phoneNumber: "0995645555",
+          phoneNumber: phoneNumberController.text,
           password: passwordController.text,
-          sexEn: "male",
-          sexAr: "ذكر",
-          dateOfBirth: "1995-08-15",
-          image: null,
+          sexEn: selectedGender.value,
+          sexAr: selectedGender.value=="male"?"ذكر":"انثى",
+          dateOfBirth: dateOfBirthController.text,
+          image: profileImage,
           createdAt: '', // This will be filled by the server
           updatedAt: '', // This will be filled by the server
         );
@@ -69,7 +75,7 @@ class RegisterController extends GetxController {
         // Extract the user and token from the response map
         final user = response['user'];
         final token = response['token'];
-
+final errormessage = response['message'];
         // Ensure the user and token are not null before saving
         if (user != null && token != null) {
           await prefAuthUtils.saveUserData(UserModel.fromJson(user));
@@ -79,10 +85,10 @@ class RegisterController extends GetxController {
 
           // Handle successful registration
           _showSuccessSnackbar('Registration Successful', 'Welcome to the app!');
-          Get.offAllNamed('/home');
+          Get.offAll(DashboardContainerScreen());
         } else {
           _hideLoading();
-          _showErrorSnackbar('Registration Failed', 'Invalid response data.');
+          _showErrorSnackbar('Registration Failed', '$errormessage');
         }
       } catch (e) {
         _hideLoading();
@@ -92,29 +98,72 @@ class RegisterController extends GetxController {
     }
   }
 
-  // Validate the form data
   bool _validateForm() {
-    return true;
-    if (fullNameEnController.text.isEmpty ||
-        fullNameArController.text.isEmpty ||
-        usernameEnController.text.isEmpty ||
-        usernameArController.text.isEmpty ||
-        emailController.text.isEmpty ||
-        phoneNumberController.text.isEmpty ||
-        passwordController.text.isEmpty ||
-        confirmPasswordController.text.isEmpty ||
-        sexEnController.text.isEmpty ||
-        sexArController.text.isEmpty ||
-        dateOfBirthController.text.isEmpty) {
-      _showErrorSnackbar('Validation Error', 'All fields are required.');
+    if (fullNameEnController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Full name (English) is required.');
       return false;
     }
+
+    if (fullNameArController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Full name (Arabic) is required.');
+      return false;
+    }
+
+    if (usernameEnController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Username (English) is required.');
+      return false;
+    }
+
+    if (usernameArController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Username (Arabic) is required.');
+      return false;
+    }
+
+    if (emailController.text.isEmpty || !isValidEmail(emailController.text)) {
+      _showErrorSnackbar('Validation Error', 'A valid email is required.');
+      return false;
+    }
+
+    if (phoneNumberController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Phone number is required.');
+      return false;
+    }
+
+    if (passwordController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Password is required.');
+      return false;
+    }
+
+    if (confirmPasswordController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Confirm password is required.');
+      return false;
+    }
+
     if (passwordController.text != confirmPasswordController.text) {
       _showErrorSnackbar('Validation Error', 'Passwords do not match.');
       return false;
     }
+
+    if (selectedGender.value.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Gender selection is required.');
+      return false;
+    }
+
+    if (dateOfBirthController.text.isEmpty) {
+      _showErrorSnackbar('Validation Error', 'Date of birth is required.');
+      return false;
+    } else {
+      DateTime dateOfBirth = DateTime.parse(dateOfBirthController.text);
+      if (!isAdult(dateOfBirth)) {
+        _showErrorSnackbar('Validation Error', 'You must be at least 18 years old.');
+        return false;
+      }
+    }
+
     return true;
   }
+
+
 
   void _showLoading() {
     Get.dialog(

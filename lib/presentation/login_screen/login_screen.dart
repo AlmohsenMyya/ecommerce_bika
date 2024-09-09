@@ -124,11 +124,13 @@ class LoginScreen extends GetWidget<LoginController> {
   Widget _buildPageHeader() {
     return Column(children: [
       CustomIconButton(
-          height: 72.adaptSize,
-          width: 72.adaptSize,
-          padding: EdgeInsets.all(20.h),
+          height: 170.adaptSize,
+          width: 170.adaptSize,
+          padding: EdgeInsets.all(0.h),
           decoration: IconButtonStyleHelper.fillPrimary,
-          child: CustomImageView(imagePath: ImageConstant.imgClose)),
+          child: CustomImageView(
+            imagePath: ImageConstant.imgClose,
+          )),
       SizedBox(height: 16.v),
       Text("msg_welcome_to_e_com".tr, style: theme.textTheme.titleMedium),
       SizedBox(height: 10.v),

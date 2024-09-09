@@ -26,10 +26,13 @@ class CustomTextFormField extends StatelessWidget {
     this.fillColor,
     this.filled = true,
     this.validator,
+    this.labelText,
+    this.labelStyle
   }) : super(
           key: key,
         );
-
+  TextStyle? labelStyle;
+  String? labelText;
   final Alignment? alignment;
 
   final double? width;
@@ -110,6 +113,8 @@ class CustomTextFormField extends StatelessWidget {
         suffixIcon: suffix,
         suffixIconConstraints: suffixConstraints,
         isDense: true,
+        // labelText: labelText,
+        labelStyle:labelStyle?? TextStyle(color: Colors.blue) ,
         contentPadding: contentPadding ?? EdgeInsets.all(15.h),
         fillColor:
             fillColor ?? theme.colorScheme.onPrimaryContainer.withOpacity(1),

@@ -15,11 +15,12 @@ class SplashScreen extends GetWidget<SplashController> {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 5.v),
+Spacer(),
                       CustomImageView(
                           imagePath: ImageConstant.imgLogo,
-                          height: 72.adaptSize,
-                          width: 72.adaptSize)
+                          height: 270.adaptSize,
+                          width: 270.adaptSize),
+                      Spacer()
                     ]))));
   }
 }

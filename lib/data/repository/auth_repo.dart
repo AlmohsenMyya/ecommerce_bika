@@ -53,19 +53,19 @@ class AuthRepo {
     final request = http.MultipartRequest('POST', url);
 
     request.fields['name_en'] = user.nameEn;
-    request.fields['name_ar'] = user.nameAr;
+    request.fields['name_ar'] = user.nameAr!;
     request.fields['username_en'] = user.usernameEn;
-    request.fields['username_ar'] = user.usernameAr;
+    request.fields['username_ar'] = user.usernameAr!;
     request.fields['email'] = user.email;
     request.fields['phone_number'] = user.phoneNumber;
-    request.fields['password'] = user.password;
+    request.fields['password'] = user.password!;
     request.fields['sex_en'] = user.sexEn;
     request.fields['sex_ar'] = user.sexAr;
     request.fields['date_of_birth'] = user.dateOfBirth;
-    request.fields['password_confirmation'] = user.password;
+    request.fields['password_confirmation'] = user.password!;
 
     if (user.image != null) {
-      request.files.add(await http.MultipartFile.fromPath('image', user.image!));
+      request.files.add(await http.MultipartFile.fromPath('image', user.image!.path));
     }
 
     final response = await request.send();
