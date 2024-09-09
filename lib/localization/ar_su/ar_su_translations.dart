@@ -292,6 +292,7 @@ final Map<String, String> arSu = {
 "lbl_category": "الفئة",
 "lbl_change_password": "تغيير كلمة المرور",
   "lbl_change_language":"تغيير اللغة",
+  "lbl_logOut":" تسجيل الخروج",
 "lbl_delete": "حذف",
 "lbl_dominic_ovo": "المحسن ميا",
 "lbl_dress": "فستان",

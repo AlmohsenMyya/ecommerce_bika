@@ -49,6 +49,16 @@ class AccountPage extends StatelessWidget {
                       onTapAccountOption: () {
                         onTapChangeLanguage();
                       }),
+
+                  SizedBox(
+                    height: 5.v,
+                  ),
+                  _buildAccountOption(
+                      bagIcon: ImageConstant.imgLanguageIcon,
+                      order: "lbl_logOut".tr,
+                      onTapAccountOption: () async{
+                        await controller.logoutUser();
+                      }),
                 ]))));
   }
 

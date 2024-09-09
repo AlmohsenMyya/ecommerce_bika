@@ -292,6 +292,7 @@ final Map<String, String> enUs = {
   "lbl_category": "Category",
   "lbl_change_password": "Change Password",
   "lbl_change_language":"change language",
+  "lbl_logOut":" Log Out",
   "lbl_delete": "Delete",
   "lbl_dominic_ovo": "Almohsen Myya",
   "lbl_dress": "Dress",
